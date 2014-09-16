@@ -1,0 +1,97 @@
+---
+title: Example
+number: 2014.1
+oauthor: Adam Tenderholt
+odate: 16-Sep-14
+fontsize: 12pt
+...
+
+PURPOSE
+=======
+
+The purposes of this test method are:
+
+#.  Introduce the Markdown syntax.
+
+#.  Demonstrate conversion to PDF.
+
+#.  Show how Github can be used to effectively collaborate. 
+
+BACKGROUND
+==========
+
+Markdown formatting was created as a way to specify document structure using a simple syntax for document features. This is in contrast to mark-up formats such as HTML or LaTex which require a more extensive knowledge to format documents properly and are not as human readable.
+
+SYNTAX
+======
+
+Sections
+--------
+
+Section headers are created by either placing # characters on the same line or = characters under the heading:
+
+    SYNTAX
+    ======
+
+or 
+
+    # SYNTAX
+
+Subsections can be created using multiple # characters or - characters:
+
+    Sections
+    --------
+
+or 
+
+    ## Sections
+
+Lists
+-----
+
+Another feature that is very useful are nested (enumerated) lists. For example:
+
+#.  Item 1
+    #.  subitem 1.1
+    #.  subitem 1.2
+#.  Item 2
+    #.  subitem 2.1
+    
+The above list was created with the following syntax. Note that the list is autonumbered based on section number, but this is *somewhat* configurable.
+
+    #.  Item 1
+        #.  subitem 1.1
+        #.  subitem 1.2
+    #.  Item 2
+        #.  subitem 2.1
+        
+Highlighting
+------------
+
+Items can be *italicized* or **bolded** using a very simple syntax:
+
+    *italicized*
+    **bolded**
+    
+CONVERSION
+==========
+
+The open source program "pandoc" can convert from several text formatting styles, including Markdown and \LaTeX, and output several other formats such as HTML, PDF, and DOCX. 
+
+It was most straight-forward to use pandoc to convert to PDF, which goes through a \LaTeX\ intermediate file. *I did not explore any other formats, except briefly for DOCX which seemed harder to customize.* 
+
+Conversion from Markdown to PDF requires "pdflatex" to be properly installed. \LaTeX\ to PDF has the advantage that customizing a template file is often all that is needed and can incorporate \LaTeX\ math or other commands with little effort. For example:
+
+$\int x^2 dx = \frac{1}{3} x^3 + C$
+
+or
+
+\begin{equation}
+\int x^2 dx = \frac{1}{3} x^3 + C
+\end{equation}
+
+GITHUB COLLABORATION
+====================
+
+This next part is harder to show in a document, so a example Github repo has been created.
+
